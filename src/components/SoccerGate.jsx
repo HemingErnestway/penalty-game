@@ -9,12 +9,12 @@ import { Spot } from "@/components/Spot"
 
 /** @param {SoccerGateProps} props */
 export function SoccerGate({ spots }) {
-  const sortedSpots = spots.sort((a, b) => a.id - b.id)
+  const positionedSpots = spots.sort((a, b) => a.position - b.position)
 
   return (
     <div className="soccer-gate">
-      {sortedSpots.map((spot) => (
-        <Spot spot={spot} key={spot.id} />
+      {positionedSpots.map((spot) => (
+        <Spot spot={spot} key={spot.position} />
       ))}
     </div>
   )

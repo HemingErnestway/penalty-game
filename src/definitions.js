@@ -5,8 +5,8 @@
 
 /**
  * @typedef {Object} TSpot
- * @property {number} id
  * @property {SpotColor | SpotNumber} value
  * @property {boolean} visible
  * @property {boolean} revealed
+ * @property {number} position
  */

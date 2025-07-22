@@ -23,14 +23,16 @@ export function shuffle(array) {
  */
 export function generateSpotsOrder(colors, numbers) {
   const spots = [...colors, ...numbers]
-    .map((value, index) => ({
-      id: index,
-      value: value,
+    .map(value => ({
+      value,
       visible: false,
       revealed: false,
     }))
 
-  return shuffle(spots)
+  const shuffledSpots = shuffle(spots)
+  const enumeratedSpots = shuffledSpots.map((spot, index) => ({ ...spot, position: index }))
+
+  return /** @type {TSpot[]} */ shuffle(enumeratedSpots)
 }
 
 /**

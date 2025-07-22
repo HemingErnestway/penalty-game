@@ -7,13 +7,18 @@ import { SoccerGate } from "@/components/SoccerGate"
 
 
 export function App() {
-  const [spots, setSpots] = useState(showSpots(generateSpotsOrder(COLORS, NUMBERS), 2))
+  const [spots, setSpots] = useState(
+    showSpots(generateSpotsOrder(COLORS, NUMBERS), 2)
+  )
   console.log(spots)
 
   return (
     <div className="game">
       <div className="wrapper">
         <SoccerGate spots={spots} />
+        <div style={{ backgroundColor: "lightgray", height: "100px" }}>
+
+        </div>
       </div>
     </div>
   )
