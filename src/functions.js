@@ -26,7 +26,7 @@ export function generateSpotsOrder(colors, numbers) {
     .map(value => ({
       value,
       visible: false,
-      revealed: false,
+      revealed: true,
     }))
 
   const shuffledSpots = shuffle(spots)
@@ -45,7 +45,6 @@ export function showSpots(spots, amount) {
 
   for (let i = 0; i < amount; ++i) {
     spots[i].visible = true
-    spots[i].revealed = true
   }
 
   return newSpots
