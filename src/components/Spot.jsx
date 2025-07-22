@@ -10,7 +10,7 @@ import { COLOR_VALUES, COLORS } from "@/constants"
 /** @param {SpotProps} props */
 export function Spot({ spot }) {
   if (!spot.visible) {
-    return <div className="spot invisible"></div>
+    return <div className="spot invisible">{spot.value}</div>
   }
 
   if (COLORS.includes(spot.value)) {

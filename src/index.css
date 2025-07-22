@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: sans-serif;
 }
 
 .game {
@@ -38,4 +39,6 @@ body {
 
 .invisible {
     border: 1px dashed black;
+    font-size: 16px;
+    opacity: 50%;
 }
